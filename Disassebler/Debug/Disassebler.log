@@ -1,0 +1,6 @@
+﻿  FileLoader.cpp
+c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\fileloader.cpp(15): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
+  Disassebler.cpp
+  Generating Code...
+  Disassebler.vcxproj -> c:\users\lenovo\documents\visual studio 2017\Projects\Disassebler\Debug\Disassebler.exe
+  Disassebler.vcxproj -> c:\users\lenovo\documents\visual studio 2017\Projects\Disassebler\Debug\Disassebler.pdb (Partial PDB)
