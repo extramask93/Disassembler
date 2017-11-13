@@ -142,6 +142,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="avr.h" />
     <ClInclude Include="Disassembler.h" />
     <ClInclude Include="FileLoader.h" />
     <ClInclude Include="stdafx.h" />

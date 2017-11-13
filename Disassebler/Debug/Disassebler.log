@@ -1,6 +1,6 @@
-﻿  FileLoader.cpp
-c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\fileloader.cpp(15): warning C4244: 'argument': conversion from 'std::streamoff' to 'const unsigned int', possible loss of data
-  Disassebler.cpp
-  Generating Code...
-  Disassebler.vcxproj -> c:\users\lenovo\documents\visual studio 2017\Projects\Disassebler\Debug\Disassebler.exe
-  Disassebler.vcxproj -> c:\users\lenovo\documents\visual studio 2017\Projects\Disassebler\Debug\Disassebler.pdb (Partial PDB)
+﻿  Disassebler.cpp
+c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\disassembler.h(29): warning C4227: anachronism used: qualifiers on reference are ignored
+c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\disassembler.h(30): warning C4227: anachronism used: qualifiers on reference are ignored
+c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\disassembler.h(31): warning C4227: anachronism used: qualifiers on reference are ignored
+c:\users\lenovo\documents\visual studio 2017\projects\disassebler\disassebler\disassembler.h(32): warning C4227: anachronism used: qualifiers on reference are ignored
+  Disassebler.vcxproj -> C:\Users\LENOVO\Documents\Visual Studio 2017\Projects\Disassebler\Debug\Disassebler.exe

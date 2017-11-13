@@ -2,18 +2,21 @@
 #include <iostream>
 #include<string>
 
-Disassembler::Disassembler()
+Disassembler::Disassembler(std::function<void(Data&, std::vector<uint8_t> const& bytes)> dis)
 {
+	disopcode = dis;
 }
 
 void Disassembler::Decode(std::vector<uint8_t> const& bytes)
 {
+	bytes_=bytes;
 	for(unsigned int address=0;address < bytes.size();)
 	{
 		Data data;
-		callback(data);
 		data.address = address;
+		disopcode(data,bytes_);
 		PrintInstruction(data);
+		data.Reset();
 		address += data.instructionLength;
 	}
 }
@@ -34,7 +37,7 @@ void Disassembler::PrintOperands(Data& data) const
 	{
 		std::cout<<*operand;
 		if(std::next(operand) != data.operands.end())
-			std::cout<<', ';
+			std::cout<<", " ;
 	}
 }
 
@@ -59,4 +62,21 @@ void Disassembler::PrintInstruction(Data& data) const
 void Disassembler::PrintAddress(Data& data) const
 {
 	printf("%08x",data.address);
+}
+void Disassembler::DecodeInstructions(Data& data)
+{
+	int opcode = bytes_[data.address];
+	opcode <<= 8;
+	opcode += bytes_[data.address +1];
+	switch((opcode >> 12) & 0xF)
+	{
+	case 0x0:
+		data.mnemonic = "add";
+		break;
+	case 0x1:
+		data.mnemonic = "adc";
+		break;
+	default:
+		data.trap = true;
+	}
 }

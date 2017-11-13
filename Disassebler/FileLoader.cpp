@@ -1,5 +1,5 @@
 #include "FileLoader.h"
-
+#include <assert.h>
 
 FileLoader::FileLoader()
 {
@@ -17,6 +17,17 @@ std::vector<uint8_t> FileLoader::Load(std::string fileName)
 	return bytes;
 }
 
+void FileLoader::ParseELF()
+{
+
+}
+
+
+void FileLoader::ParseELFHeader()
+{
+	assert(bytes.size() >= sizeof(Elf32_Ehdr));
+	std::copy(bytes.begin(),bytes.end(),reinterpret_cast<uint8_t*>(&header));
+}
 
 FileLoader::~FileLoader()
 {
